@@ -30,7 +30,7 @@ export default function Page() {
                 htmlFor='text'
                 className={`absolute left-6 transition-all ${
                   isFocused1
-                    ? 'text-[#febd69] text-sm top-0'
+                    ? 'text-red-600 text-sm top-0'
                     : 'text-gray-400 top-5'
                 }`}
               >
@@ -50,7 +50,7 @@ export default function Page() {
                 htmlFor='text'
                 className={`absolute left-6 transition-all ${
                   isFocused2
-                    ? 'text-[#febd69] text-sm top-0'
+                    ? 'text-red-600 text-sm top-0'
                     : 'text-gray-400 top-5'
                 }`}
               >
@@ -70,7 +70,7 @@ export default function Page() {
                 htmlFor='text'
                 className={`absolute left-6 transition-all ${
                   isFocused3
-                    ? 'text-[#febd69] text-sm top-0'
+                    ? 'text-red-600 text-sm top-0'
                     : 'text-gray-400 top-5'
                 }`}
               >
