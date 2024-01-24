@@ -3,7 +3,7 @@ import { FaChevronRight } from 'react-icons/fa6';
 export default function Login() {
   return (
     <div className='flex flex-col items-center justify-center'>
-      <h1 className='text-5xl font-bold mt-16 mb-4'>
+      <h1 className='text-5xl font-extrabold mt-16 mb-4'>
         Unlimited movies, TV shows and more
       </h1>
       <h2 className='text-2xl font-semibold my-4'>
