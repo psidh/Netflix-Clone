@@ -16,7 +16,7 @@ export default function Login() {
         <input
           type='text'
           title='signin'
-          className='my-4 bg-black bg-opacity-80 pl-6 py-3 rounded-lg'
+          className='my-4 bg-black focus:outline-none bg-opacity-80 pl-6 py-3 rounded-lg'
           placeholder='Email Address'
         />
         <a href='/login' className='bg-red-600 hover:bg-red-700 opacity-100 mx-2  px-4 py-3 rounded flex justify-between items-center'>
