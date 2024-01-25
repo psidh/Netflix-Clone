@@ -1,35 +1,69 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
+
+import planData from '@/data/PlanCardData';
 
 export default function PlanCard() {
+
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  const handleCardSelect = (cardName: any) => {
+    setSelectedCard(cardName === selectedCard ? null : cardName);
+  };
+
   return (
-    <div>
-      <div className='max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md'>
-        <div className='md:flex'>
-          <div className='md:flex-shrink-0'>
-            <img
-              className='h-48 w-full object-cover md:w-48'
-              src='premium4k.jpg'
-              alt='Premium 4K'
-            />
-          </div>
-          <div className='p-8'>
-            <div className='uppercase tracking-wide text-sm text-indigo-500 font-semibold'>
-              Premium 4K + HDR
-            </div>
-            <div className='mt-2 text-xl leading-tight font-medium text-gray-800'>
-              Monthly Price: ₹649
-            </div>
-            <div className='mt-2 text-gray-600'>
-              <p>Video and Sound Quality: Best</p>
-              <p>Resolution: 4K (Ultra HD) + HDR</p>
-              <p>Spatial Audio (Immersive Sound): Included</p>
-              <p>Supported Devices: TV, Computer, Mobile Phone, Tablet</p>
-              <p>Devices for Simultaneous Streaming: 4</p>
-              <p>Download Devices: Unlimited</p>
-            </div>
-          </div>
+    <div className='grid grid-cols-4 gap-6 mx-20'>
+      {planData.map((plan) => (
+      <div
+          key={plan.name}
+          className={`${selectedCard === plan.name ? 'border border-red-600 bg-red-50' : '' } hover:border-red-500 transition ease-in-out duration-300 flex flex-col items-start justify-between p-8 bg-white text-black rounded-lg border border-gray-200 cursor-pointer`}
+          onClick={() => handleCardSelect(plan.name)}
+        >
+        <div className="bg-gradient-to-r from-blue-700 to-red-700  w-full p-4 rounded-xl text-white">
+          <h1 className='text-xl font-semibold'>{plan.name}</h1>
+          <h2 className='text-md font-medium'>{plan.videoAndSoundQuality}</h2>
+        </div>
+        <div className='my-2 flex flex-col items-start justify-start'>
+          <h1 className='text-sm font-semibold text-[#767676]'>Monthly price</h1>
+          <h2 className='text-lg font-light mb-2'>{plan.monthlyPrice}</h2>
+        </div>
+        <div className='my-2 flex flex-col items-start justify-end'>
+          <h1 className='text-sm font-semibold text-[#767676]'>Video and sound quality</h1>
+          <h2 className='text-lg font-light mb-2'>{plan.videoAndSoundQuality}</h2>
+        </div>
+        <div className='my-2 flex flex-col items-start justify-end'>
+          <h1 className='text-sm font-semibold text-[#767676]'>Resolution</h1>
+          <h2 className='text-lg font-light mb-2'>{plan.resolution}</h2>
+          
+        </div>
+        {plan.spatialAudio ? (
+          <div className='my-2 flex flex-col items-start justify-end'>
+          <h1 className='text-sm font-semibold text-[#767676]'>Spatial audio (immersive sound)</h1>
+          <h2 className='text-lg font-light mb-2'>{plan.spatialAudio}</h2>
+        </div>
+        ) : (
+          <div></div>
+        )}
+        
+        <div className='my-2 flex flex-col items-start justify-end'>
+          <h1 className='text-sm font-semibold text-[#767676]'>Supported devices</h1>
+          <h2 className='text-lg font-light mb-2'>{plan.supportedDevices}</h2>
+          
+        </div>
+        <div className='my-2 flex flex-col items-start justify-end'>
+          <h1 className='text-sm font-semibold text-[#767676]'>
+            Devices your household can watch at the same time
+          </h1>
+          <h2 className='text-lg font-light mb-2'>{plan.simultaneousStreams}</h2>
+          
+        </div>
+        <div className='my-2 flex flex-col items-start justify-end'>
+          <h1 className='text-sm font-semibold text-[#767676]'>Download Devices</h1>
+          <h2 className='text-lg font-light mb-2'>{plan.downloadDevices}</h2>
+          
         </div>
       </div>
+      ))}
     </div>
   );
 }
