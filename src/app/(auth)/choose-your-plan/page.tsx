@@ -52,7 +52,7 @@ export default function Page() {
         <div className='flex items-center justify-center w-full'>
           <button
             onClick={() => handleClick(tier)}
-            className='next'
+            className='nextChoose'
           >
             Next
           </button>

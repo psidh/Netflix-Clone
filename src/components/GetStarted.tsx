@@ -1,8 +1,8 @@
 import { FaChevronRight } from 'react-icons/fa6';
 
-export default function Login() {
+export default function GetStarted() {
   return (
-    <div className='flex flex-col items-center justify-center'>
+    <div className='flex flex-col items-center justify-center text-white'>
       <h1 className='text-5xl font-bold mt-16 mb-4'>
         Unlimited movies, TV shows and more
       </h1>

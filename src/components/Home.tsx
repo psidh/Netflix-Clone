@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from './GetStarted';
+import GetStarted from './GetStarted';
 import Navbar from './Navbar';
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
     >
       <Navbar />
       <div className='p-24 flex justify-center h-screen items-center'>
-        <Login />
+        <GetStarted />
       </div>
     </div>
   );

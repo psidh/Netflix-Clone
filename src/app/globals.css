@@ -5,8 +5,13 @@
 @layer components{
 
   .next {
+    @apply text-center bg-[#E50914] py-4 w-full my-8 text-white transition duration-200 text-2xl hover:shadow-lg
+  }
+
+  .nextChoose {
     @apply text-center bg-[#E50914] py-4 w-[40%] my-8 text-white transition duration-200 text-2xl hover:shadow-lg
   }
+
 
   .steps {
     @apply flex flex-col justify-center items-center py-32 bg-white text-black text-center
@@ -42,7 +47,7 @@
 
   }
   .signin{
-    @apply my-4 py-3 px-2 bg-[#E50914] rounded-lg w-full cursor-pointer
+    @apply my-4 py-3 px-2 bg-[#E50914] rounded-lg w-full cursor-pointer text-white
   }
 
   .planCard {

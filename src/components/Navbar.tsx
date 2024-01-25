@@ -9,7 +9,7 @@ export default function Navbar() {
         <Image src={'/logo.png'} width={240} height={240} alt='Logo' />
         <a
           href='/login'
-          className='rounded-md bg-[#E50914] px-5 py-2 font-semibold'
+          className='rounded-md bg-[#E50914] px-5 py-2 font-semibold text-white'
         >
           Sign In
         </a>
