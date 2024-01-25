@@ -1,10 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
+import SideBar from '@/components/SideBar'
 
 export default function page() {
   return (
-    <div>
-      <Image src="/page.png" alt="page" />
-    </div>
+    <section>
+      
+      <div>
+      <SideBar />
+      
+      </div>
+
+
+    </section>
   )
 }

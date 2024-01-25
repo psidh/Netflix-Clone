@@ -4,7 +4,7 @@ export default function page() {
   return (
     <div className='h-screen'>
       <StaticNavbar />
-      <div className='flex flex-col justify-center items-center py-48 bg-white text-black text-center'>
+      <div className='stepThree'>
         <div className='flex flex-col justify-center items-center p-4'>
           <Image src={'/step3.png'} height={80} width={80} alt='step1' />
           <h1 className='text-3xl font-semibold text-slate-700 my-4 text-left'>
@@ -17,7 +17,7 @@ export default function page() {
           </div>
           <a
             href='/login'
-            className=' bg-[#E50914] py-4 mt-4 w-full text-white  text-2xl shadow-lg'
+            className=' next'
           >
             Next
           </a>

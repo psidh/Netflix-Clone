@@ -43,7 +43,7 @@ export default function Page() {
     <div className='h-screen'>
       <Toaster />
       <StaticNavbar />
-      <div className='flex flex-col justify-center items-center py-48 bg-white text-black text-left'>
+      <div className='stepTwo'>
         <div className='flex flex-col justify-center items-start p-4'>
           <h1 className=' text-black my-1'>
             STEP <span className='font-extrabold'>2</span> OF{' '}
@@ -62,7 +62,7 @@ export default function Page() {
             type='text'
             title='signin'
             id='email'
-            className='my-1 border w-full border-black focus:outline-none pl-6 py-3 rounded-md'
+            className='stepTwoEmail'
             placeholder='Email Address'
             onChange={(event) =>
               setUser({ ...user, email: event.target.value })
@@ -72,7 +72,7 @@ export default function Page() {
             type='password'
             title='signin'
             id='password'
-            className='mt-2 mb-4 border w-full border-black focus:outline-none pl-6 py-3 rounded-md'
+            className='stepTwoPass'
             placeholder='Add a password'
             onChange={(event) =>
               setUser({ ...user, password: event.target.value })
@@ -81,14 +81,14 @@ export default function Page() {
           {buttonDisabled ? (
             <button
               disabled
-              className='text-center bg-[#484848] py-4 w-full text-white transition duration-200 text-2xl hover:shadow-lg'
+              className='disabledNext'
             >
               Next
             </button>
           ) : (
             <button
               onClick={signUpUser}
-              className='text-center bg-[#E50914] py-4 w-full text-white transition duration-200 text-2xl hover:shadow-lg'
+              className='next'
             >
               Next
             </button>

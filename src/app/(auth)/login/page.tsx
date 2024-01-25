@@ -56,7 +56,7 @@ export default function Login() {
         <Navbar />
         <Toaster />
         <div className='flex flex-col items-center justify-center h-screen'>
-          <div className='flex flex-col items-center justify-between w-[30%] bg-black bg-opacity-80 rounded-lg p-8'>
+          <div className='loginCard'>
             <h1 className='text-3xl font-semibold text-white mb-2'>Sign In</h1>
 
             <div className={`relative w-full my-2 mb-2'}`}>
@@ -64,7 +64,7 @@ export default function Login() {
                 type='email'
                 title='email'
                 id='email'
-                className='my-2 bg-[#202020] focus:outline-none pl-6 py-3 rounded-lg w-full'
+                className='loginInputs'
                 placeholder='Email Address'
                 onChange={(e) => setUser({ ...user, email: e.target.value })}
               />
@@ -74,13 +74,13 @@ export default function Login() {
                 type='password'
                 title='password'
                 id='password'
-                className='my-2 bg-[#202020] focus:outline-none pl-6 py-3 rounded-lg w-full'
+                className='loginInputs'
                 onChange={(e) => setUser({ ...user, password: e.target.value })}
                 placeholder='Password'
               />
             </div>
             <button
-              className='my-4 py-3 px-2 bg-[#E50914] rounded-lg w-full cursor-pointer'
+              className='signin'
               onClick={loginUser}
               disabled={buttonDisabled}
             >

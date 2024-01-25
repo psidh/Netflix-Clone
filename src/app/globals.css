@@ -2,32 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer components{
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .next {
+    @apply text-center bg-[#E50914] py-4 w-[40%] my-8 text-white transition duration-200 text-2xl hover:shadow-lg
+  }
+
+  .steps {
+    @apply flex flex-col justify-center items-center py-32 bg-white text-black text-center
+  }
+
+  .stepTwo {
+    @apply flex flex-col justify-center items-center py-48 bg-white text-black text-left
+  }
+
+  .stepTwoEmail {
+    @apply my-1 border w-full border-black focus:outline-none pl-6 py-3 rounded-md
+    
+  }
+
+  .stepTwoPass{
+    @apply mt-2 mb-4 border w-full border-black focus:outline-none pl-6 py-3 rounded-md
+  }
+
+  .disabledNext{
+    @apply text-center bg-[#484848] py-4 w-full text-white transition duration-200 text-2xl hover:shadow-lg
+  }
+
+  .stepThree {
+    @apply flex flex-col justify-center items-center py-48 bg-white text-black text-center
+  }
+
+  .loginCard  {
+    @apply flex flex-col items-center justify-between w-[30%] bg-black bg-opacity-80 rounded-lg p-8
+  }
+
+  .loginInputs {
+    @apply my-2 bg-[#202020] focus:outline-none pl-6 py-3 rounded-lg w-full
+
+  }
+  .signin{
+    @apply my-4 py-3 px-2 bg-[#E50914] rounded-lg w-full cursor-pointer
+  }
+
+  .planCard {
+    @apply hover:border-red-500 hover:border-2 transition ease-in-out duration-300 flex flex-col items-start justify-between p-2 bg-white text-black rounded-2xl border-2 border-[#dbdbdb] cursor-pointer
+  }
+
+  .parentCard {
+    @apply my-2 flex flex-col items-start justify-end mx-6
+  }
+
+  .parentCard h1{
+    @apply text-sm font-semibold text-[#767676]
+  }
+
+  .parentCard h2 {
+    @apply text-lg font-light mb-2
+
+  }
+
+  .gradientCard {
+    @apply bg-gradient-to-r from-blue-700 to-red-700  w-full p-4 rounded-xl text-white
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}

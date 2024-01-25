@@ -52,7 +52,7 @@ export default function Page() {
         <div className='flex items-center justify-center w-full'>
           <button
             onClick={() => handleClick(tier)}
-            className='text-center bg-[#E50914] py-4 w-[40%] my-8 text-white transition duration-200 text-2xl hover:shadow-lg'
+            className='next'
           >
             Next
           </button>
