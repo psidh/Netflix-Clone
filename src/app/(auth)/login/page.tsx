@@ -31,7 +31,7 @@ export default function Page() {
                 htmlFor='text'
                 className={`absolute left-6 transition-all ${
                   isFocused2
-                    ? 'text-red-600 text-sm top-0'
+                    ? 'text-[##E50914] text-sm top-0'
                     : 'text-gray-400 top-5'
                 }`}
               >
@@ -58,7 +58,7 @@ export default function Page() {
                 Password
               </label>
             </div>
-            <button className='my-4 py-3 px-2 bg-red-600 rounded-lg w-full'>
+            <button className='my-4 py-3 px-2 bg-[#E50914] rounded-lg w-full'>
               Sign In
             </button>
 
