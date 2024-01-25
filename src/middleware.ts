@@ -34,6 +34,6 @@ export const config = {
     '/getstarted/step2',
     '/getstarted/step3',
     '/getstarted/payment',
-    '/choose-your-plan',
+    '/home',
   ],
 };

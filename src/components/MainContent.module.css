@@ -1,0 +1,30 @@
+/* MainContent.module.css */
+
+.titleContainer {
+  position: absolute;
+  top: 4.9rem;
+  left: 40;
+  z-index: 1;
+}
+.imageContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.imageContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0));
+  -webkit-mask: radial-gradient(circle at left top, transparent 45%, black 100%),
+                radial-gradient(circle at left bottom, transparent 45%, black 100%),
+                linear-gradient(to bottom, transparent 45%, black 100%);
+  mask: radial-gradient(circle at right top, transparent 80%, black 100%),
+        radial-gradient(circle at right bottom, transparent 30%, black 100%),
+        linear-gradient(to bottom, transparent 1%, black 100%);
+}
+

@@ -70,5 +70,13 @@
   .gradientCard {
     @apply bg-gradient-to-r from-blue-700 to-red-700  w-full p-4 rounded-xl text-white
   }
+
+  .sidebar{
+    @apply flex flex-col justify-center items-center px-8 py-4 bg-black text-white text-4xl
+  }
+
+  .sidebar .p {
+    @apply cursor-pointer transition duration-200 hover:-translate-y-1 my-4 hover:underline hover:underline-offset-2 hover:text-red-600 
+  }
 }
 

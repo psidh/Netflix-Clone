@@ -32,7 +32,7 @@ export default function Login() {
       console.log(response);
       console.log('button clicked');
       
-      router.push('/choose-your-plan');
+      router.push('/home');
     } catch (error) {
       toast.error('Email or Password seems to be incorrect. Please try again');
       console.log(error);
