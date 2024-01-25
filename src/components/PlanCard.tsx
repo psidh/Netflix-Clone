@@ -1,14 +1,17 @@
 'use client'
 import React, { useState } from 'react';
-
 import planData from '@/data/PlanCardData';
 
-export default function PlanCard() {
+interface PlanCardProps {
+  onTierSelect: (selectedTier: string) => void;
+}
 
-  const [selectedCard, setSelectedCard] = useState(null);
+const PlanCard: React.FC<PlanCardProps> = ({ onTierSelect }) => {
+  const [selectedCard, setSelectedCard] = useState<string | null>(null);
 
-  const handleCardSelect = (cardName: any) => {
+  const handleCardSelect = (cardName: string) => {
     setSelectedCard(cardName === selectedCard ? null : cardName);
+    onTierSelect(cardName);
   };
 
   return (
@@ -16,8 +19,9 @@ export default function PlanCard() {
       {planData.map((plan) => (
       <div
           key={plan.name}
-          className={`${selectedCard === plan.name ? 'border border-red-600 bg-red-100 ' : '' } hover:border-red-500 transition ease-in-out duration-300 flex flex-col items-start justify-between p-2 bg-white text-black rounded-2xl border border-[#c7c7c7] cursor-pointer`}
+          className={`${selectedCard === plan.name ? 'border border-red-500 bg-gray-100 ' : '' } hover:border-red-500 hover:border-2 transition ease-in-out duration-300 flex flex-col items-start justify-between p-2 bg-white text-black rounded-2xl border-2 border-[#dbdbdb] cursor-pointer`}
           onClick={() => handleCardSelect(plan.name)}
+          
         >
         <div className="bg-gradient-to-r from-blue-700 to-red-700  w-full p-4 rounded-xl text-white">
           <h1 className='text-xl font-semibold'>{plan.name}</h1>
@@ -67,3 +71,6 @@ export default function PlanCard() {
     </div>
   );
 }
+
+
+export default PlanCard;

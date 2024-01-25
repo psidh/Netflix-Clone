@@ -1,11 +1,51 @@
-'use client'
+'use client';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { toast, Toaster } from 'react-hot-toast';
 import Navbar from '@/components/Navbar';
-import { useState } from 'react';
+import axios from 'axios';
 
-export default function Page() {
-  
-  const [isFocused2, setIsFocused2] = useState<Boolean>(false);
-  const [isFocused3, setIsFocused3] = useState<Boolean>(false);
+export default function Login() {
+  const router = useRouter();
+
+  const [user, setUser] = React.useState({
+    email: '',
+    password: '',
+  });
+
+  const [buttonDisabled, setButtonDisabled] = React.useState(true);
+
+  async function loginUser(){
+    try {
+      console.log("clicking");
+      
+      toast.loading('Waiting...', {
+        duration: 2000,
+      });
+      console.log(user);
+      
+      const response = await axios.post('/api/login', user);
+      toast.success('Login successful', {
+        duration: 2000,
+      });
+      console.log(response);
+      console.log('button clicked');
+      
+      router.push('/choose-your-plan');
+    } catch (error) {
+      toast.error('Email or Password seems to be incorrect. Please try again');
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (user.email.length > 0 && user.password.length > 0) {
+      setButtonDisabled(false);
+    } else {
+      setButtonDisabled(true);
+    }
+  }, [user]);
 
   return (
     <section>
@@ -14,55 +54,40 @@ export default function Page() {
         style={{ backgroundImage: `url('/bg.jpg')` }}
       >
         <Navbar />
+        <Toaster />
         <div className='flex flex-col items-center justify-center h-screen'>
           <div className='flex flex-col items-center justify-between w-[30%] bg-black bg-opacity-80 rounded-lg p-8'>
             <h1 className='text-3xl font-semibold text-white mb-2'>Sign In</h1>
-            
-            <div className={`relative w-full my-2 ${isFocused2 ? '' : 'mb-2'}`}>
+
+            <div className={`relative w-full my-2 mb-2'}`}>
               <input
                 type='email'
                 title='email'
                 id='email'
                 className='my-2 bg-[#202020] focus:outline-none pl-6 py-3 rounded-lg w-full'
-                onFocus={() => setIsFocused2(true)}
-                onBlur={() => setIsFocused2(false)}
+                placeholder='Email Address'
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
               />
-              <label
-                htmlFor='text'
-                className={`absolute left-6 transition-all ${
-                  isFocused2
-                    ? 'text-[##E50914] text-sm top-0'
-                    : 'text-gray-400 top-5'
-                }`}
-              >
-                Email
-              </label>
             </div>
-            <div className={`relative w-full my-2 ${isFocused3 ? '' : 'mb-2'}`}>
+            <div className={`relative w-full my-2 mb-2`}>
               <input
                 type='password'
                 title='password'
                 id='password'
                 className='my-2 bg-[#202020] focus:outline-none pl-6 py-3 rounded-lg w-full'
-                onFocus={() => setIsFocused3(true)}
-                onBlur={() => setIsFocused3(false)}
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
+                placeholder='Password'
               />
-              <label
-                htmlFor='text'
-                className={`absolute left-6 transition-all ${
-                  isFocused3
-                    ? 'text-red-600 text-sm top-0'
-                    : 'text-gray-400 top-5'
-                }`}
-              >
-                Password
-              </label>
             </div>
-            <button className='my-4 py-3 px-2 bg-[#E50914] rounded-lg w-full'>
+            <button
+              className='my-4 py-3 px-2 bg-[#E50914] rounded-lg w-full cursor-pointer'
+              onClick={loginUser}
+              disabled={buttonDisabled}
+            >
               Sign In
             </button>
 
-            <a href='/signup' className='text-slate-500 my-4'>
+            <a href='/getstarted/step1' className='text-slate-500 my-4'>
               Already on Netflix?{' '}
               <span className='text-white text-lg hover:underline underline-offset-2'>
                 SignUp now

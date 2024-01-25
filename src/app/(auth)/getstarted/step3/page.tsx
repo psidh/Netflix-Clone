@@ -16,7 +16,7 @@ export default function page() {
           <div className='flex justify-start items-center'><Image src={'/tick.png'} height={40} width={40} alt='step1' /> <p className='font-light'>No ads and no extra fees. Ever.</p> </div>
           </div>
           <a
-            href='/getstarted/choose-your-plan'
+            href='/login'
             className=' bg-[#E50914] py-4 mt-4 w-full text-white  text-2xl shadow-lg'
           >
             Next

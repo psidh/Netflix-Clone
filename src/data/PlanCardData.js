@@ -11,7 +11,7 @@ const planData = [
     colorScheme: 'bg-gradient-to-tr from-blue-500 to-red-700',
   },
   {
-    name: 'Standard1080p',
+    name: 'Standard',
     videoAndSoundQuality: 'Great',
     monthlyPrice: '₹499',
     resolution: '1080p (Full HD)',
@@ -21,7 +21,7 @@ const planData = [
     colorScheme: 'bg-gradient-to-tr from-blue-500 to-red-700',
   },
   {
-    name: 'Basic720p',
+    name: 'Basic',
     videoAndSoundQuality: 'Good',
     monthlyPrice: '₹199',
     resolution: '720p (HD)',
@@ -31,7 +31,7 @@ const planData = [
     colorScheme: 'bg-gradient-to-tr from-green-400 to-yellow-500',
   },
   {
-    name: 'Mobile480p',
+    name: 'Mobile',
     videoAndSoundQuality: 'Fair',
     monthlyPrice: '₹149',
     resolution: '480p',

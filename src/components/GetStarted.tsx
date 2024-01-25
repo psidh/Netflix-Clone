@@ -13,12 +13,6 @@ export default function Login() {
         Ready to watch? Enter your email to create or restart your membership.
       </h3>
       <div className='my-4 flex justify-between items-center'>
-        <input
-          type='text'
-          title='signin'
-          className='my-4 bg-black focus:outline-none bg-opacity-80 pl-6 py-3 rounded-lg'
-          placeholder='Email Address'
-        />
         <a href='/getstarted/step1' className='bg-[#E50914] opacity-100 mx-2  px-4 py-3 rounded flex justify-between items-center'>
           <p>Get Started</p>
           <FaChevronRight />
