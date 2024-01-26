@@ -1,9 +1,10 @@
 const Classics = [
   {
     title: 'Pulp Fiction',
-    videolink: 'https://www.youtube.com/watch?v=s7EdQ4FqbhY',
+    videolink: '/movieVideos/pulp',
+    youtube: 'https://www.youtube.com/watch?v=s7EdQ4FqbhY',
     primaryposter: '/movies/pulpfiction/primary.jpg',
-    secondaryposter: '/movies/pulpfiction/secondary.jpg',
+    secondaryposter: '/movies/pulpfiction/secondary.webp',
     genre: 'crime',
     releaseYear: 1994,
     rating: 9,
@@ -12,7 +13,8 @@ const Classics = [
   },
   {
     title: 'The Matrix',
-    videolink: 'https://www.youtube.com/watch?v=vKQi3bBA1y8',
+    videolink: '/movieVideos/matrix',
+    youtube: 'https://www.youtube.com/watch?v=vKQi3bBA1y8',
     primaryposter: '/movies/matrix/primary.webp',
     secondaryposter: '/movies/matrix/secondary.jpg',
     genre: 'sci-fi',
@@ -23,7 +25,8 @@ const Classics = [
   },
   {
     title: 'Forrest Gump',
-    videolink: 'https://www.youtube.com/watch?v=bLvqoHBptjg',
+    videolink: '/movieVideos/forrest',
+    youtube: 'https://www.youtube.com/watch?v=bLvqoHBptjg',
     primaryposter: '/movies/forrest/primary.jpg',
     secondaryposter: '/movies/forrest/secondary.jpg',
     genre: 'drama',
@@ -34,7 +37,8 @@ const Classics = [
   },
   {
     title: 'The Godfather',
-    videolink: 'https://www.youtube.com/watch?v=sY1S34973zA',
+    videolink: '/movieVideos/godfather',
+    youtube: 'https://www.youtube.com/watch?v=sY1S34973zA',
     primaryposter: '/movies/godfather/primary.jpg',
     secondaryposter: '/movies/godfather/secondary.jpg',
     genre: 'crime',
@@ -45,7 +49,8 @@ const Classics = [
   },
   {
     title: 'Gladiator',
-    videolink: 'https://www.youtube.com/watch?v=owK1qxDselE',
+    videolink: '/movieVideos/gladiator',
+    youtube: 'https://www.youtube.com/watch?v=owK1qxDselE',
     primaryposter: '/movies/gladiator/primary.webp',
     secondaryposter: '/movies/gladiator/secondary.jpg',
     genre: 'action',
@@ -56,7 +61,8 @@ const Classics = [
   },
   {
     title: 'Once Upon a Time in the world',
-    videolink: 'https://www.youtube.com/watch?v=W6Mm8Sbe__o',
+    videolink: '/movieVideos/once',
+    youtube: 'https://www.youtube.com/watch?v=W6Mm8Sbe__o',
     primaryposter: '/movies/once/primary.jpg',
     secondaryposter: '/movies/once/secondary.jpg',
     genre: 'drama',
