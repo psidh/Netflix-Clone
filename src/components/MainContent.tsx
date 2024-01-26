@@ -3,13 +3,14 @@ import { useEffect, useState } from 'react';
 import Movies from '@/data/MoviesData';
 import Image from 'next/image';
 import { FaImdb } from 'react-icons/fa';
-import YoutubeEmbed from '@/components/YoutubeTrailer';
-import VideoPlayer from '@/components/YTVideo';
 import styles from './MainContent.module.css';
+import { useRouter } from 'next/navigation';
+import Classics from '@/data/ClassicData';
 
 const MainContent = () => {
   const movies = Movies;
-
+  const classics = Classics;
+  const router = useRouter();
   const [selectedMovie, isSelectedMovie] = useState(movies[0]);
   const handleSelectedMovie = (movie: any) => {
     isSelectedMovie(movie);
@@ -20,8 +21,12 @@ const MainContent = () => {
   const handleTrailer = (movie: any) => {
     setShow(true);
   };
+
+  const handlePush = () => {
+    router.push('/home/12');
+  };
   return (
-    <div>
+    <div className='text-white'>
       <div key={selectedMovie.title} className='text-white px-6'>
         <div className={styles.titleContainer}>
           <h1 className='text-6xl font-semibold  mb-4'>
@@ -36,11 +41,16 @@ const MainContent = () => {
               {selectedMovie.rating} / 10
             </h2>
           </div>
-          <button className='py-3 px-12 text-xl my-2 rounded-full transition duration-300 hover:bg-red-700 bg-red-600'>
+          <button
+            onClick={handlePush}
+            className='py-3 px-12 text-xl my-2 rounded-full transition duration-300 hover:bg-red-700 bg-red-600'
+          >
             Play
           </button>
-          <button onClick={handleTrailer}
-            className='py-3 px-12 text-xl my-2 rounded-full transition duration-300 hover:bg-white bg-gray-300 text-slate-600 ml-3'>
+          <button
+            onClick={handleTrailer}
+            className='py-3 px-12 text-xl my-2 rounded-full transition duration-300 hover:bg-white bg-gray-300 text-slate-600 ml-3'
+          >
             Watch Trailer
           </button>
         </div>
@@ -55,12 +65,14 @@ const MainContent = () => {
         </div>
       </div>
 
-      {/* Carousel - Map */}
-      <section className='grid grid-cols-8 gap-6 mt-64 relative z-1'>
+      
+
+
+      <section className='grid grid-cols-6 mr-5 gap-6 mt-64 relative z-1'>
         {movies.map((movie) => (
           <div
             key={movie.title}
-            className='mt-24'
+            className='mt-32'
             onClick={() => handleSelectedMovie(movie)}
           >
             <Image
@@ -72,15 +84,24 @@ const MainContent = () => {
             />
           </div>
         ))}
-
-        {show ? (
-          <div className='absolute top-1 left-1 z-1'>
-            {/* <YoutubeEmbed embedId={"zSWdZVtXT7E"} /> */}
-            <VideoPlayer />
+      </section>
+      <h2 className='my-8 font-semibold text-3xl'>Classics</h2>
+      <section className='grid grid-cols-6 mr-5 gap-6 relative z-1'>
+        {classics.map((classic) => (
+          <div
+            key={classic.title}
+            className=''
+            onClick={() => handleSelectedMovie(classic)}
+          >
+            <Image
+              src={`${classic.primaryposter}`}
+              width={230}
+              height={300}
+              alt={classic.title}
+              className='rounded-sm cursor-pointer hover:opacity-70 transition ease-linear duration-200 hover:scale-105 hover:-translate-y-2'
+            />
           </div>
-        ) : (
-          <div></div>
-        )}
+        ))}
       </section>
     </div>
   );
