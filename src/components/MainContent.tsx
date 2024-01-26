@@ -23,7 +23,7 @@ const MainContent = () => {
   };
 
   const handlePush = () => {
-    router.push('/home/12');
+    router.push(`home/${selectedMovie.title}`);
   };
   return (
     <div className='text-white'>
@@ -43,13 +43,13 @@ const MainContent = () => {
           </div>
           <button
             onClick={handlePush}
-            className='py-3 px-12 text-xl my-2 rounded-full transition duration-300 hover:bg-red-700 bg-red-600'
+            className='py-2 px-16 text-xl my-2 rounded-full transition duration-300 hover:bg-red-700 bg-red-600'
           >
             Play
           </button>
           <button
             onClick={handleTrailer}
-            className='py-3 px-12 text-xl my-2 rounded-full transition duration-300 hover:bg-white bg-gray-300 text-slate-600 ml-3'
+            className='py-2 px-8 text-xl my-2 rounded-full transition duration-300 hover:bg-slate-400 bg-white text-black ml-3'
           >
             Watch Trailer
           </button>
@@ -65,7 +65,7 @@ const MainContent = () => {
         </div>
       </div>
 
-      
+
 
 
       <section className='grid grid-cols-6 mr-5 gap-6 mt-64 relative z-1'>

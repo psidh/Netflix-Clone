@@ -1,4 +1,4 @@
-// Video Schema
+// Movie Schema
 const mongoose = require('mongoose');
 
 const movieSchema = new mongoose.Schema({
@@ -7,6 +7,10 @@ const movieSchema = new mongoose.Schema({
     required: true,
   },
   videolink: {
+    type: String,
+    required: true,
+  },
+  youtube: {
     type: String,
     required: true,
   },
@@ -32,8 +36,8 @@ const movieSchema = new mongoose.Schema({
   description: {
     type: String,
   },
+
 });
+const Movie = mongoose.models.movies || mongoose.model('movies', movieSchema);
 
-const Video = mongoose.models.videos || mongoose.model('videos', videoSchema);
-
-export default Video;
+export default Movie;
