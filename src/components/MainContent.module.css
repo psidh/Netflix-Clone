@@ -2,14 +2,18 @@
 
 .titleContainer {
   position: absolute;
-  top: 4.9rem;
+  top: 4rem;
   left: 40;
   z-index: 1;
 }
+
 .imageContainer {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.gridContent {
 }
 
 .imageContainer::before {
@@ -17,14 +21,30 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 150%;
-  height: 150%;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0));
-  -webkit-mask: radial-gradient(circle at left top, transparent 45%, black 100%),
-                radial-gradient(circle at left bottom, transparent 45%, black 100%),
-                linear-gradient(to bottom, transparent 45%, black 100%);
+  /* -webkit-mask: radial-gradient(circle at left top, transparent 45%, black 100%),
+                radial-gradient(circle at left bottom, transparent 45%, black 100%); */
+                /* linear-gradient(to bottom, transparent 45%, black 100%); */
   mask: radial-gradient(circle at right top, transparent 80%, black 100%),
         radial-gradient(circle at right bottom, transparent 30%, black 100%),
         linear-gradient(to bottom, transparent 1%, black 100%);
+}
+
+
+.videoResponsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.videoResponsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 

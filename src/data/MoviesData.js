@@ -1,8 +1,8 @@
 const movies = [
   {
-    title: 'Mission Impossible',
+    title: 'Mission Impossible 7',
     videolink:
-      'https://www.youtube.com/watch?v=avz06PDqDbM&pp=ygUdbWlzc2lvbiBpbXBvc3NpYmxlIDcgdHJhaWxlciA%3D',
+      'https://www.youtube.com/watch?v=2m1drlOZSDw',
     primaryposter: '/movies/mi7/primary.jpg',
     secondaryposter: '/movies/mi7/secondary.jpg',
     genre: 'action',
@@ -15,7 +15,7 @@ const movies = [
   {
     title: 'The Dark Knight Rises',
     videolink:
-      'https://www.youtube.com/watch?v=g8evyE9TuYk&pp=ygUddGhlIGRhcmsga25pZ2h0IHJpc2VzIHRyYWlsZXI%3D',
+      'https://www.youtube.com/watch?v=g8evyE9TuYk',
     primaryposter: '/movies/tdk/primary.jpg',
     secondaryposter: '/movies/tdk/secondary.avif',
     genre: 'thriller',
@@ -28,7 +28,7 @@ const movies = [
   {
     title: 'Games of Thrones',
     videolink:
-      'https://www.youtube.com/watch?v=rlR4PJn8b8I&pp=ygULZ290IHRyYWlsZXI%3D',
+      'https://www.youtube.com/watch?v=KPLWWIOCOOQ',
     primaryposter: '/movies/got/primary.jpg',
     secondaryposter: '/movies/got/secondary.webp',
     genre: 'drama',
@@ -40,8 +40,7 @@ const movies = [
 
   {
     title: 'Interstellar',
-    videolink:
-      'https://www.youtube.com/watch?v=zSWdZVtXT7E&pp=ygUUaW50ZXJzdGVsbGFyIHRyYWlsZXI%3D',
+    videolink: 'https://www.youtube.com/watch?v=zSWdZVtXT7E',
     primaryposter: '/movies/interstellar/primary.jpg',
     secondaryposter: '/movies/interstellar/secondary.webp',
     genre: 'drama',
