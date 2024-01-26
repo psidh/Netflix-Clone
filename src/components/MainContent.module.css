@@ -11,10 +11,9 @@
   position: absolute;
   top: 0;
   right: 0;
+  
 }
 
-.gridContent {
-}
 
 .imageContainer::before {
   content: "";
@@ -31,20 +30,3 @@
         radial-gradient(circle at right bottom, transparent 30%, black 100%),
         linear-gradient(to bottom, transparent 1%, black 100%);
 }
-
-
-.videoResponsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-
-.videoResponsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
