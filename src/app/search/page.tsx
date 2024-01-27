@@ -88,16 +88,25 @@ export default function Page() {
                 className='rounded-xl'
               />
               <div className='flex flex-col justify-start items-start'>
-                <h1 className='text-4xl mb-4'>{results[0].title}</h1>
-                <h2 className='text-lg my-4 text-[#666666]'>
+                <h1 className='text-4xl'>{results[0].title}</h1>
+                <h2 className='text-xl my-2 text-[#666666]'>
                   {results[0].description}
                 </h2>
-                <div className='flex my-2 items-center'>
+                <div className='flex  items-center'>
                   <FaImdb className='text-4xl mr-2 text-yellow-500' />
                   <h2 className='font-semibold text-xl text-yellow-400'>
                     {results[0].rating}.0 / 10
                   </h2>
                 </div>
+                <h3 className='text-lg my-2 text-[#b8b8b8]'>
+                  Release Year:  {results[0].releaseYear}
+                </h3>
+                <h4 className='text-lg my-2 text-[#b8b8b8]'>
+                  Genre:  {results[0].genre}
+                </h4>
+                <a href={results[0].youtube} className='px-8 py-2 rounded-full bg-red-600 text-white hover:text-black transition-all duration-200  hover:bg-white'>
+                  Watch Trailer
+                </a>
               </div>
             </div>
           )}
