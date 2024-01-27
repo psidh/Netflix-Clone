@@ -68,11 +68,11 @@ const MainContent = () => {
 
 
 
-      <section className='grid grid-cols-6 mr-5 gap-6 mt-64 relative z-1'>
+      <section className='grid grid-cols-6 mr-5 gap-6 mt-32 relative z-1'>
         {movies.map((movie) => (
           <div
             key={movie.title}
-            className='mt-32'
+            className=''
             onClick={() => handleSelectedMovie(movie)}
           >
             <Image
