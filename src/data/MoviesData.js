@@ -1,7 +1,7 @@
 const movies = [
   {
     title: 'Mission Impossible 7',
-    videolink: '/movieVideos/mi',
+    videolink: '/movieVideos/MissionImpossible.mp4',
     youtube: 'https://www.youtube.com/watch?v=2m1drlOZSDw',
     primaryposter: '/movies/mi7/primary.jpg',
     secondaryposter: '/movies/mi7/secondary.jpg',
@@ -13,7 +13,7 @@ const movies = [
   },
   {
     title: 'The Dark Knight Rises',
-    videolink: '/movieVideos/dk',
+    videolink: '/movieVideos/The Dark Knight Rises.mp4',
     youtube: 'https://www.youtube.com/watch?v=g8evyE9TuYk',
     primaryposter: '/movies/tdk/primary.jpg',
     secondaryposter: '/movies/tdk/secondary.avif',
@@ -25,7 +25,7 @@ const movies = [
   },
   {
     title: 'Games of Thrones',
-    videolink: '/movieVideos/got',
+    videolink: '/movieVideos/GOT.mp4',
     youtube: 'https://www.youtube.com/watch?v=KPLWWIOCOOQ',
     primaryposter: '/movies/got/primary.jpg',
     secondaryposter: '/movies/got/secondary.webp',
@@ -37,7 +37,7 @@ const movies = [
   },
   {
     title: 'Interstellar',
-    videolink: '/movieVideos/interstellar',
+    videolink: '/movieVideos/Interstellar.mp4',
     youtube: 'https://www.youtube.com/watch?v=zSWdZVtXT7E',
     primaryposter: '/movies/interstellar/primary.jpg',
     secondaryposter: '/movies/interstellar/secondary.webp',
@@ -50,7 +50,7 @@ const movies = [
   // Add 10 more unique movies
   {
     title: 'Inception',
-    videolink: '/movieVideos/inception',
+    videolink: '/movieVideos/Inception.mp4',
     youtube: 'https://www.youtube.com/watch?v=YoHD9XEInc0',
     primaryposter: '/movies/inception/primary.jpg',
     secondaryposter: '/movies/inception/secondary.jpg',
@@ -62,7 +62,7 @@ const movies = [
   },
   {
     title: 'The Shawshank Redemption',
-    videolink: '/movieVideos/shawshank',
+    videolink: '/movieVideos/Shawshank.mp4',
     youtube: 'https://www.youtube.com/watch?v=6hB3S9bIaco',
     primaryposter: '/movies/sr/primary.jpg',
     secondaryposter: '/movies/sr/secondary.jpg',
