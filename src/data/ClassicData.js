@@ -1,7 +1,7 @@
 const Classics = [
   {
     title: 'Pulp Fiction',
-    videolink: '/movieVideos/pulp',
+    videolink: '/movieVideos/Pulp.mp4',
     youtube: 'https://www.youtube.com/watch?v=s7EdQ4FqbhY',
     primaryposter: '/movies/pulpfiction/primary.jpg',
     secondaryposter: '/movies/pulpfiction/secondary.webp',
@@ -13,7 +13,7 @@ const Classics = [
   },
   {
     title: 'The Matrix',
-    videolink: '/movieVideos/matrix',
+    videolink: '/movieVideos/Matrix.mp4',
     youtube: 'https://www.youtube.com/watch?v=vKQi3bBA1y8',
     primaryposter: '/movies/matrix/primary.webp',
     secondaryposter: '/movies/matrix/secondary.jpg',
@@ -25,7 +25,7 @@ const Classics = [
   },
   {
     title: 'Forrest Gump',
-    videolink: '/movieVideos/forrest',
+    videolink: '/movieVideos/Forrest.mp4',
     youtube: 'https://www.youtube.com/watch?v=bLvqoHBptjg',
     primaryposter: '/movies/forrest/primary.jpg',
     secondaryposter: '/movies/forrest/secondary.jpg',
@@ -37,7 +37,7 @@ const Classics = [
   },
   {
     title: 'The Godfather',
-    videolink: '/movieVideos/godfather',
+    videolink: '/movieVideos/Godfather.mp4',
     youtube: 'https://www.youtube.com/watch?v=sY1S34973zA',
     primaryposter: '/movies/godfather/primary.jpg',
     secondaryposter: '/movies/godfather/secondary.jpg',
@@ -49,7 +49,7 @@ const Classics = [
   },
   {
     title: 'Gladiator',
-    videolink: '/movieVideos/gladiator',
+    videolink: '/movieVideos/Gladiator.mp4',
     youtube: 'https://www.youtube.com/watch?v=owK1qxDselE',
     primaryposter: '/movies/gladiator/primary.webp',
     secondaryposter: '/movies/gladiator/secondary.jpg',
@@ -61,8 +61,8 @@ const Classics = [
   },
   {
     title: 'Once Upon a Time in the world',
-    videolink: '/movieVideos/once',
-    youtube: 'https://www.youtube.com/watch?v=W6Mm8Sbe__o',
+    videolink: '/movieVideos/Once.mp4',
+    youtube: 'https://www.youtube.com/watch?v=ELeMaP8EPAA',
     primaryposter: '/movies/once/primary.jpg',
     secondaryposter: '/movies/once/secondary.jpg',
     genre: 'drama',

@@ -23,8 +23,10 @@ const MainContent = () => {
   };
 
   const handlePush = () => {
-    router.push(`home/${selectedMovie.title}`);
+    
+    router.push(`/home/${selectedMovie.title}`); 
   };
+  
   return (
     <div className='text-white'>
       <div key={selectedMovie.title} className='text-white px-6'>
@@ -68,11 +70,11 @@ const MainContent = () => {
 
 
 
-      <section className='grid grid-cols-6 mr-5 gap-6 mt-64 relative z-1'>
+      <section className='grid grid-cols-6 mr-5 gap-6 mt-32 relative z-1'>
         {movies.map((movie) => (
           <div
             key={movie.title}
-            className='mt-32'
+            className=''
             onClick={() => handleSelectedMovie(movie)}
           >
             <Image
@@ -80,7 +82,7 @@ const MainContent = () => {
               width={230}
               height={300}
               alt={movie.title}
-              className='rounded-sm cursor-pointer hover:opacity-70 transition ease-linear duration-200 hover:scale-105 hover:-translate-y-2'
+              className='rounded-lg cursor-pointer hover:opacity-70 transition ease-linear duration-200 hover:scale-105 hover:-translate-y-2'
             />
           </div>
         ))}
