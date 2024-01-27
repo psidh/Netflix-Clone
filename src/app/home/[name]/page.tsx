@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-
+import { BiArrowBack } from 'react-icons/bi';
 interface Movie {
   videolink: string;
 }
@@ -42,9 +42,14 @@ const VideoPlayer = ({ params }: { params: { name: String } }) => {
   return (
     <div className='h-screen bg-black flex flex-col items-center justify-center'>
       {movie && (
-        <video width='full' height='full' controls>
-          <source src={`${movie.videolink}`} type='video/mp4' />
-        </video>
+        <div>
+          <a href='/' title='home'>
+            <BiArrowBack className='cursor-pointer transition duration-200 hover:-translate-y-1 my-4 hover:underline hover:underline-offset-2 hover:text-red-600 ' />
+          </a>
+          <video width='full' height='full' controls>
+            <source src={`${movie.videolink}`} type='video/mp4' />
+          </video>
+        </div>
       )}
     </div>
   );

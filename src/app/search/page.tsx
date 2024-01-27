@@ -78,7 +78,7 @@ export default function Page() {
             <div
               onClick={handlePush}
               key={results[0]._id}
-              className='flex justify-between items-start space-x-8 border border-[#525252] p-4 rounded-3xl'
+              className='flex justify-between items-start space-x-8 border border-[#525252] p-4 rounded-3xl cursor-pointer'
             >
               <Image
                 src={results[0].primaryposter}

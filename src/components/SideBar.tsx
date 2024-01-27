@@ -31,9 +31,9 @@ export default function SideBar() {
        <a href="/home"><BiHomeAlt2 title='Home'className='p' /></a>
       <a href="/TV"> <PiMonitor title='TV' className='p' /></a>
        <a href="/movies"><MdMovieCreation title='Movies' className='p' /></a> 
-      <a href="/trending"> <FiTrendingUp title='Trending' className='p' /></a>
-      <a href="/wishlist"><GoPlus title='Add to WishList' className='p' /> </a>  
-      <a href="/favourites"><MdFavorite title='Favourites' className='p' /></a> 
+      {/* <a href="/trending"> <FiTrendingUp title='Trending' className='p' /></a> */}
+      {/* <a href="/wishlist"><GoPlus title='Add to WishList' className='p' /> </a>   */}
+      {/* <a href="/favourites"><MdFavorite title='Favourites' className='p' /></a>  */}
        <CiLogout title='Logout' onClick={logout} className='p' />
       </div>
     </div>
