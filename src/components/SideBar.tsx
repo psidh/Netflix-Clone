@@ -23,18 +23,18 @@ export default function SideBar() {
       console.log('Error logging out');
     }
   }
-  return (
+    return (
     <div>
       <Toaster />
       <div className='sidebar'>
-        <FiSearch title='Search' className='p' />
-        <BiHomeAlt2 title='Home'className='p' />
-        <PiMonitor title='TV' className='p' />
-        <MdMovieCreation title='Movies' className='p' />
-        <FiTrendingUp title='Trending' className='p' />
-        <GoPlus title='Add to WishList' className='p' />
-        <MdFavorite title='Favourites' className='p' />
-        <CiLogout title='Logout' onClick={logout} className='p' />
+       <a href="/search"><FiSearch title='Search' className='p' /></a> 
+       <a href="/home"><BiHomeAlt2 title='Home'className='p' /></a>
+      <a href="/TV"> <PiMonitor title='TV' className='p' /></a>
+       <a href="/movies"><MdMovieCreation title='Movies' className='p' /></a> 
+      <a href="/trending"> <FiTrendingUp title='Trending' className='p' /></a>
+      <a href="/wishlist"><GoPlus title='Add to WishList' className='p' /> </a>  
+      <a href="/favourites"><MdFavorite title='Favourites' className='p' /></a> 
+       <CiLogout title='Logout' onClick={logout} className='p' />
       </div>
     </div>
   );
