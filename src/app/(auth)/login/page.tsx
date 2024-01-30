@@ -59,7 +59,7 @@ export default function Login() {
           <div className='loginCard'>
             <h1 className='text-3xl font-semibold text-white mb-2'>Sign In</h1>
 
-            <div className={`relative w-full my-2 mb-2'}`}>
+            <div className={`relative w-full my-2 mb-2`}>
               <input
                 type='email'
                 title='email'

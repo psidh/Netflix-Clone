@@ -43,7 +43,7 @@
   }
 
   .loginInputs {
-    @apply my-2 bg-[#202020] focus:outline-none pl-6 py-3 rounded-lg w-full
+    @apply my-2 bg-[#202020] focus:outline-none pl-6 py-3 rounded-lg w-full text-white
 
   }
   .signin{
