@@ -12,8 +12,8 @@ export async function GET(request: NextRequest) {
     if (userID) {
       const user = await User.findById(userID);
       if (user) {
-        const allFavourites = user.favourites;
-        return NextResponse.json(allFavourites, { status: 200 });
+        const allWatchList = user.watchlist;
+        return NextResponse.json(allWatchList, { status: 200 });
       } else {
         return NextResponse.json(
           { message: 'User not found' },
@@ -47,19 +47,19 @@ export async function POST(request: NextRequest) {
       console.log(MovieID);
 
       if (user && movie) {
-        if (user.favourites.includes(movie)) {
+        if (user.watchlist.includes(movie)) {
           console.log('true true true');
 
           return NextResponse.json(
-            { message: 'Movie already in favourites' },
-            { status: 409 }
+            { message: 'Movie already in watchlist' },
+            { status: 409 } // 409 Conflict is often used to indicate that the request could not be completed due to a conflict with the current state of the target resource
           );
         }
 
         user.favourites.push(movie);
         await user.save();
         return NextResponse.json(
-          { message: 'Movie added to favourites' },
+          { message: 'Movie added to watchlist' },
           { status: 200 }
         );
       } else {
@@ -91,17 +91,17 @@ export async function DELETE(request: NextRequest) {
       const movie = await Movie.findOne({ _id: MovieID });
 
       if (user && movie) {
-        const index = user.favourites.map((favMovie: any) => favMovie._id.toString()).indexOf(MovieID);
+        const index = user.watchlist.indexOf(MovieID);
         if (index > -1) {
-          user.favourites.splice(index, 1);
+          user.watchlist.splice(index, 1);
           await user.save();
           return NextResponse.json(
-            { message: 'Movie removed from favourites' },
+            { message: 'Movie removed from watchlist' },
             { status: 200 }
           );
         } else {
           return NextResponse.json(
-            { message: 'Movie not found in favourites' },
+            { message: 'Movie not found in watchlist' },
             { status: 404 }
           );
         }
