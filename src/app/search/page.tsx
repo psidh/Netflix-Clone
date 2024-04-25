@@ -6,21 +6,6 @@ import Image from 'next/image';
 import { FaImdb } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 
-const Moviee = [
-  {
-    _id: '',
-    title: '',
-    videolink: '',
-    youtube: '',
-    primaryposter: '',
-    secondaryposter: '',
-    genre: '',
-    releaseYear: 0,
-    rating: 0,
-    description: '',
-  },
-];
-
 export default function Page() {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState('');

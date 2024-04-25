@@ -7,6 +7,8 @@ connect();
 export async function GET(request: NextRequest) {
   try {
     const data = await Movie.find();
+    // console.log(data[0]['_id']);
+    
 
     return NextResponse.json(data);
   } catch (error: any) {

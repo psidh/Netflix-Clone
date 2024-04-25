@@ -1,5 +1,6 @@
 const movies = [
   {
+    _id: "65b3e6497b0b2c474aee628d",
     title: 'Mission Impossible 7',
     videolink: '/movieVideos/MissionImpossible.mp4',
     youtube: 'https://www.youtube.com/watch?v=2m1drlOZSDw',
@@ -12,6 +13,7 @@ const movies = [
       'Ethan Hunt and the IMF team must track down a terrifying new weapon that threatens all of humanity if it falls into the wrong hands.',
   },
   {
+    _id: "",
     title: 'The Dark Knight Rises',
     videolink: '/movieVideos/The Dark Knight Rises.mp4',
     youtube: 'https://www.youtube.com/watch?v=g8evyE9TuYk',
@@ -24,6 +26,7 @@ const movies = [
       'Bane, an imposing terrorist, attacks Gotham City and disrupts peace. This forces Bruce Wayne to come out of hiding and don the cape and cowl of Batman again.',
   },
   {
+    _id: "",
     title: 'Games of Thrones',
     videolink: '/movieVideos/GOT.mp4',
     youtube: 'https://www.youtube.com/watch?v=KPLWWIOCOOQ',
@@ -36,6 +39,7 @@ const movies = [
       'Nine noble families wage war against each other in order to gain control over the mythical land of Westeros. Meanwhile, a force is rising after millenniums and threatens the existence of living men.',
   },
   {
+    _id: "",
     title: 'Interstellar',
     videolink: '/movieVideos/Interstellar.mp4',
     youtube: 'https://www.youtube.com/watch?v=zSWdZVtXT7E',
@@ -49,6 +53,7 @@ const movies = [
   },
   // Add 10 more unique movies
   {
+    _id: "",
     title: 'Inception',
     videolink: '/movieVideos/Inception.mp4',
     youtube: 'https://www.youtube.com/watch?v=YoHD9XEInc0',
@@ -61,6 +66,7 @@ const movies = [
       "A thief who enters the dreams of others to steal secrets from their subconscious must plant an idea into a CEO's mind.",
   },
   {
+    _id: "",
     title: 'The Shawshank Redemption',
     videolink: '/movieVideos/Shawshank.mp4',
     youtube: 'https://www.youtube.com/watch?v=6hB3S9bIaco',

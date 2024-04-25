@@ -44,7 +44,7 @@ const VideoPlayer = ({ params }: { params: { name: String } }) => {
       {movie && (
         <div>
           <a href='/' title='home'>
-            <BiArrowBack className='cursor-pointer transition duration-200 hover:-translate-y-1 my-4 hover:underline hover:underline-offset-2 hover:text-red-600 ' />
+            <BiArrowBack className='cursor-pointer transition duration-200 hover:-translate-y-1 my-4 hover:underline hover:underline-offset-2 hover:text-red-600 text-white text-3xl' />
           </a>
           <video width='full' height='full' controls>
             <source src={`${movie.videolink}`} type='video/mp4' />

@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import movies from '@/data/MoviesData';
 import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
+import addToFav from '@/functions/makeFav';
 
 const MainContent = () => {
   const movie = movies[0];
@@ -74,6 +75,28 @@ const MainContent = () => {
     }
   };
 
+  const removeFav = async (movieId: any) => {
+    try {
+      const response = await fetch(`/api/favourite`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ _id: movieId }),
+      });
+
+      if (!response.ok) {
+        console.error('Failed to remove favorite');
+        return;
+      }
+      toast.success('Removed successfully');
+      setFavourite(false);
+      console.log(response);
+    } catch (error) {
+      console.error('Error removing favorite:', error);
+    }
+  };
+
   const handlePush = (selectedMovie: any) => {
     router.push(`/home/${selectedMovie.title}`);
   };
@@ -110,7 +133,7 @@ const MainContent = () => {
             </button>
             {isFavourite ? (
               <FaHeart
-                onClick={() => makeFav(selectedMovie._id)}
+                onClick={() => removeFav(selectedMovie._id)}
                 className='my-3 ml-4 text-4xl text-red-500'
               />
             ) : (

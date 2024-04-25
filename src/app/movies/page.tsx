@@ -37,10 +37,10 @@ export default function Page() {
     fetchData();
   }, []);
 
-  const handlePush = () => {
-    console.log();
+  const handlePush = (movieName :any) => {
+    router.push(`/home/${encodeURIComponent(movieName)}`);
   };
-
+  
   return (
     <section className='bg-black h-screen text-white'>
       <div className='flex justify-between items-start bg-black'>
@@ -50,7 +50,7 @@ export default function Page() {
         <div className='w-[85%] mt-8'>
           {results.map((result, index) => (
             <div
-              onClick={handlePush}
+              onClick={() => handlePush(result.title)}
               key={result._id}
               className='flex justify-between items-start space-x-8 border border-[#525252] p-4 rounded-3xl my-4 cursor-pointer'
             >
