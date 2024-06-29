@@ -18,10 +18,11 @@ testuser@example.com
 
 ## Tech Stack 
 - Next.js, TS, React
-- AWS EC2
+- AWS S3
 - Tailwind CSS
 - MongoDB
 - Express
 - Node.js
+- Vercel
  
 Demo: [Netflix Clone](https://netflix-clone-psi.vercel.app/)
