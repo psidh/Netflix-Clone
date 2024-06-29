@@ -17,8 +17,8 @@ testuser@example.com
 - Favourites
 
 ## Tech Stack 
-- React
-- Next.js
+- Next.js, TS, React
+- AWS EC2
 - Tailwind CSS
 - MongoDB
 - Express
