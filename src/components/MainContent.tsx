@@ -126,7 +126,7 @@ const MainContent = () => {
               Play
             </a>
             <a
-              href={`home/${selectedMovie.title}`}
+              href={selectedMovie.youtube}
               className='py-2 px-8 text-xl my-2 rounded-full transition duration-300 hover:bg-slate-400 bg-white text-black ml-3'
             >
               Watch Trailer
