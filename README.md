@@ -7,6 +7,12 @@ testuser@example.com
 1234
 ```
 
+## Setup using Docker
+
+1. Clone the repository
+2. Run `docker-compose up`
+3. Visit `http://localhost:3000`
+
 ## Features Supported:
 - Login
 - Register
